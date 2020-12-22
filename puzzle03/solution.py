@@ -1,7 +1,7 @@
 def traverseSlope(vy, vx, grid):
     trees = 0
     for y in range(0, len(grid), vy):
-        x = y * vx % len(grid[0])
+        x = ((y / vy) * vx) % len(grid[0])
 
         if grid[y][x] == '#':
             trees += 1
